@@ -1,0 +1,88 @@
+:root {
+  --blue: #00acdc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* Header 1200x60 with 50px side paddings */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 50px;
+  background-color: #fff;
+}
+
+.header__logo-link {
+  display: block;
+  height: 40px;
+}
+
+.header__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+/* Nav */
+.nav {
+  height: 60px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* gaps between items = 20px */
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px; /* 100% as in Figma */
+  letter-spacing: 0; /* IMPORTANT: 0% in Figma */
+  text-transform: uppercase;
+
+  color: #000;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--blue);
+}
+
+.nav__link.is-active {
+  color: var(--blue);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue);
+  border-radius: 2px;
+}
